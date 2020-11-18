@@ -9,7 +9,7 @@ use PoP\Translation\Facades\TranslationAPIFacade;
 use PoPSchema\CustomPosts\Facades\CustomPostTypeAPIFacade;
 use PoP\ComponentModel\MutationResolvers\AbstractMutationResolver;
 
-class FlagMutationResolver extends AbstractMutationResolver
+class FlagCustomPostMutationResolver extends AbstractMutationResolver
 {
     public function validateErrors(array $form_data): ?array
     {
