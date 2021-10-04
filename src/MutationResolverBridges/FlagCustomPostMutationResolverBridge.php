@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace PoPSitesWassup\FlagMutations\MutationResolverBridges;
 
-use Symfony\Contracts\Service\Attribute\Required;
 use PoP\ComponentModel\MutationResolvers\MutationResolverInterface;
 use PoPSitesWassup\FlagMutations\MutationResolvers\FlagCustomPostMutationResolver;
 use PoPSitesWassup\FormMutations\MutationResolverBridges\AbstractFormComponentMutationResolverBridge;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class FlagCustomPostMutationResolverBridge extends AbstractFormComponentMutationResolverBridge
 {
     protected FlagCustomPostMutationResolver $flagCustomPostMutationResolver;
 
     #[Required]
-    public function autowireFlagCustomPostMutationResolverBridge(
+    final public function autowireFlagCustomPostMutationResolverBridge(
         FlagCustomPostMutationResolver $flagCustomPostMutationResolver,
     ): void {
         $this->flagCustomPostMutationResolver = $flagCustomPostMutationResolver;
